@@ -1,5 +1,6 @@
 import cryptoroutine
 import caesar
+import colors
 
 
 def run():
@@ -17,7 +18,7 @@ def run_encrypt():
     cryptor = create_cryptor(shift)
     encrypted_text = cryptor.encrypt(text)
 
-    print("Encrypted text: " + encrypted_text + "\n")
+    print("Encrypted text: " + colors.RED + encrypted_text + colors.STANDART + "\n")
     run()
 
 
@@ -28,7 +29,7 @@ def run_decrypt():
     cryptor = create_cryptor(shift)
     decrypted_text = cryptor.decrypt(text)
 
-    print("Decrypted text: " + decrypted_text + "\n")
+    print("Decrypted text: " + colors.GREEN + decrypted_text + colors.STANDART + "\n")
     run()
 
 

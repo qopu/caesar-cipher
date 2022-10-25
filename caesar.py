@@ -22,19 +22,3 @@ class CaesarCryptor:
 
     def decrypt(self, text):
         return text.translate(self.to_decrypted)
-
-
-def do_tests():
-    src = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    a = cryptoroutine.Alphabet(source=src, shift=3)
-    a_swapcased = a.create_swapcased()
-    a_total = a + a_swapcased
-
-    cc = CaesarCryptor(a_total)
-    text_encrypted = cc.encrypt('ABCDEF-abcdef-XYZ-xyz')
-    text_decrypted = cc.decrypt(text_encrypted)
-
-    return
-
-
-do_tests()

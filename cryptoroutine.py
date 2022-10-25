@@ -35,15 +35,3 @@ class Alphabet:
         new.source = first_src + second_src
         new.shifted = first_shifted + second_shifted
         return new
-
-
-def do_tests():
-    src = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-    a = Alphabet(source=src, shift=3)
-
-    a_swapcased = a.create_swapcased()
-
-    a_total = a + a_swapcased
-
-
-do_tests()
