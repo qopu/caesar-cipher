@@ -47,4 +47,12 @@ def create_cryptor(shift):
     return caesar.CaesarCryptor(monster_alphabet)
 
 
-run()
+def test():
+    text = input("Enter text to crypt: ")
+    for i in range(1, 33):
+        cryptor = create_cryptor(i)
+        decrypted_text = cryptor.decrypt(text)
+        print("Decrypted text: " + colors.GREEN + decrypted_text + colors.STANDART + str(i) + "\n")
+
+if __name__ == "__main__":
+    test()
